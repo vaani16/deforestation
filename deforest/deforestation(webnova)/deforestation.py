@@ -71,7 +71,7 @@ def clustering(FVS, components, new):
     least_index = min(count, key = count.get)
     change_map  = np.reshape(output,(new[0] - 4, new[1] - 4))
     print("loop 3 done ")
-    return least_index, change_map
+    return least_index, change_map,output
     
     
 def find_PCAKmeans(imagepath1, imagepath2):
@@ -88,7 +88,21 @@ def find_PCAKmeans(imagepath1, imagepath2):
     EVS = pca.components_
     FVS     = find_FVS(EVS, diff_image, mean_vec, new_size)
     components = 3
-    least_index, change_map = clustering(FVS, components, new_size)
+    least_index, change_map,output = clustering(FVS, components, new_size)
+    
+    labels_reshaped = np.reshape(output, (new_size[0] - 4, new_size[1] - 4))
+    avg_pixel_values = {}
+    for label in np.unique(output):
+        # Find the pixels in the difference image that correspond to the current label
+        
+        label_pixels = diff_image[2:-2, 2:-2][labels_reshaped == label]
+        
+        # Calculate the average pixel value for the current label
+        avg_pixel_values[label] = np.mean(label_pixels)
+
+    # Print the average pixel values for each label
+    for label, avg_value in avg_pixel_values.items():
+        print(f"Label {label}: Average pixel value = {avg_value}")
     kernel = np.ones((5,5),np.uint8)
     cleanChangeMap = cv2.erode(change_map.astype(np.uint8),kernel)  # Convert to uint8 before erosion
     imageio.imsave(os.path.join('../output_queue', 'changemap.jpg'), change_map.astype(np.uint8))
