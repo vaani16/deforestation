@@ -1,5 +1,8 @@
 # Change Detection for Deforestation from Satellite Images
-This project was made as part of Webnova Hackathon and aims to utilize satellite images to detect deforestation.
+This project was made as part of the Webnova Hackathon and aims to utilize satellite images to detect deforestation.
+Global stats indicate that there has been large occurrence of deforestation 
+source:https://www.globalforestwatch.org/dashboards/global/ 
+Access to satellite images can help a lot to the cause of deforestation.
 
 This project uses a change detection algorithm to identify changes in vegetation or land cover between two satellite images. The algorithm uses Principal Component Analysis (PCA) and K-Means clustering to detect changes.
 
