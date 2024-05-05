@@ -1,5 +1,5 @@
 # Change Detection for Deforestation from Satellite Images
-This project was made as part of the Webnova Hackathon and aims to utilize satellite images to detect deforestation.
+This project was made as part of the WebNOVA II Hackathon and aims to utilize satellite images to detect deforestation.
 Global stats indicate that there has been large occurrence of deforestation 
 
 source:https://www.globalforestwatch.org/dashboards/global/ 
