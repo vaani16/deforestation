@@ -25,4 +25,4 @@ Please note that the colors themselves do not have a fixed meaning and can chang
 
 For example, a color representing a cluster with a low average pixel value likely corresponds to areas of the image where there was little to no change detected. Conversely, a color representing a cluster with a high average pixel value likely corresponds to areas where significant changes were detected.
 
-### This work uses and enhances the work of opswami189
+This work uses and enhances the work of opswami189
