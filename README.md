@@ -5,10 +5,17 @@ This project uses a change detection algorithm to identify changes in vegetation
 # Code explanation 
 The code can be broken down into several parts:
 
-find_vector_set: This function takes the difference image and its size as input, and returns the vector set and mean vector.
-find_FVS: This function finds the Feature Vector Space (FVS) for the difference image.
-clustering: This function applies K-Means clustering to the FVS.
-find_PCAKmeans: This is the main function that reads the input images, resizes them, calculates the difference image, and applies the change detection algorithm.
+## find_vector_set:
+This function takes the difference image and its size as input, and returns the vector set and mean vector.
+
+## find_FVS:
+This function finds the Feature Vector Space (FVS) for the difference image.
+
+## clustering: 
+This function applies K-Means clustering to the FVS.
+
+## find_PCAKmeans: 
+This is the main function that reads the input images, resizes them, calculates the difference image, and applies the change detection algorithm.
 
 
 # Output
